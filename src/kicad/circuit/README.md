@@ -283,37 +283,6 @@ Example:
 +--------------------------------------------------------------+
 ```
 
-## 3.5 Pin Assignments
-
-This step is important.
-
-The symbol pins and the model pins may not use the same order. If the pins are wrong, the simulation will behave incorrectly.
-
-Open the **Pin Assignments tab**.
-
-Use this assignment:
-```text
-+---------------------------+----------------------------------+
-| Symbol Pin                | Model Pin                        |
-+---------------------------+----------------------------------+
-| 1 ("C")                   | 3 ("E")                          |
-| 2 ("B")                   | 2 ("B")                          |
-| 3 ("E")                   | 1 ("C")                          |
-+---------------------------+----------------------------------+
-````
-Then click:
-
-`OK`
-
-This makes the simulation work with the provided AC128 model.
-
-Important note:
-
-This is a quick workshop method. It makes the SPICE simulation work, but it does not necessarily mean the symbol pinout is correct for making a PCB.
-
-For a real PCB, the cleaner solution is to create or use a transistor symbol and footprint with the correct pin order.
-
-For now, this is good enough for simulation.
 
 ## 3.6 Potentiometers
 
@@ -597,11 +566,11 @@ dc=0 ampl=0.2 f=440 ac=1
 ```
 For a softer input, use:
 ```text
-dc=0 ampl=0.05 f=440 ac=1
+dc=0 ampl=0.1 f=440 ac=1
 ````
 For stronger fuzz, use:
 ```text
-dc=0 ampl=0.2 f=440 ac=1
+dc=0 ampl=1.0 f=440 ac=1
 ```
 
 #### Create the transient simulation
